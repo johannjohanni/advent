@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advent Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="calendar">
+    <li><a href="https://www.youtube.com/watch?v=a4UHju8gkwI" class="day day1">1</a></li>
+    <li><a href="https://www.youtube.com/watch?v=8eFDCHPNKr0" class="day day2">2</a></li>
+    <li><a href="https://www.youtube.com/watch?v=rDRNO6oP7YM" class="day day3">3</a></li>
+    <li><a href="https://www.youtube.com/watch?v=KFwkwbKEnoU" class="day day4">4</a></li>
+    <li><a href="https://www.youtube.com/watch?v=EGGPI0ctgG8" class="day day5">5</a></li>
+    <li><a href="https://www.youtube.com/watch?v=J3yhdCw50ig" class="day day6">6</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Ea56IuNw_gU" class="day day7">7</a></li>
+    <li><a href="https://www.youtube.com/watch?v=mMTzbdfbnuI" class="day day8">8</a></li>
+    <li><a href="https://www.youtube.com/watch?v=xVMaotnXynA" class="day day9">9</a></li>
+    <li><a href="https://www.youtube.com/watch?v=fXjuBVhYcP0" class="day day10">10</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Svdt2Lf32mM" class="day day11">11</a></li>
+    <li><a href="https://www.youtube.com/watch?v=8kUbN4SfNG4" class="day day12">12</a></li>
+    <li><a href="https://www.youtube.com/watch?v=PMZ0arWUohc" class="day day13">13</a></li>
+    <li><a href="https://www.youtube.com/watch?v=E72aZaSoncs" class="day day14">14</a></li>
+    <li><a href="https://www.youtube.com/watch?v=TtN_xLpPNhI" class="day day15">15</a></li>
+    <li><a href="https://www.youtube.com/watch?v=wtxseBacSEM" class="day day16">16</a></li>
+    <li><a href="https://www.youtube.com/watch?v=pzd8UkqZit4" class="day day17">17</a></li>
+    <li><a href="https://www.youtube.com/watch?v=Fha_spwX224" class="day day18">18</a></li>
+    <li><a href="https://www.youtube.com/watch?v=57zVEtiQeJw" class="day day19">19</a></li>
+    <li><a href="https://www.youtube.com/watch?v=w64sjFksXL8" class="day day20">20</a></li>
+    <li><a href="https://www.youtube.com/watch?v=AMT9IOyXmBM" class="day day21">21</a></li>
+    <li><a href="https://www.youtube.com/watch?v=ASh6f7ph5XU" class="day day22">22</a></li>
+    <li><a href="https://www.youtube.com/watch?v=CsDbfjka8PE" class="day day23">23</a></li>
+    <li><a href="https://www.youtube.com/watch?v=ztOI82yYp30" class="day day24">24</a></li>
+  </ul>
+
+</body>
+
+<script>
+  const todayDate = new Date();
+  const month = todayDate.getMonth(); // 0 = January
+  const day = todayDate.getDate();
+
+  if (month === 11 && day >= 1 && day <= 24) {
+    const todayElement = document.querySelector(`.day.day${day}`);
+
+    if (todayElement) {
+      todayElement.classList.add("today");
+
+      todayElement.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+</script>
+
+</html>
